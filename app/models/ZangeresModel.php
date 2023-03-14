@@ -1,6 +1,6 @@
 <?php
 
-class CountryModel
+class ZangeresModel
 {
     private $db;
 
@@ -9,11 +9,11 @@ class CountryModel
         $this->db = new Database();
     }
 
-    public function getCountries()
+    public function getZangeressen()
     {
         $sql = 'SELECT  Id
                        ,Name
-                FROM    Country';
+                FROM    Zangeres';
 
         $this->db->query($sql);
 

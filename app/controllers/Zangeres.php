@@ -2,11 +2,11 @@
 
 class Zangeres extends BaseController
 {
-    private $zangeresModel;
+    private $ZangeresModel;
 
     public function __construct()
     {
-        $this->zangeresModel = $this->model('ZangeresModel');
+        $this->ZangeresModel = $this->model('ZangeresModel');
     }
 
     public function index()
@@ -15,16 +15,16 @@ class Zangeres extends BaseController
             'title' => 'Top 5 rijkste zangeressen ter wereld'
         ];
 
-        $this->view('country/index', $data);
+        $this->view('Zangeres/index', $data);
     }
 
 
     public function getZangeressen($id1=NULL, $id2=NULL) 
     {
-        $zangeressen = $this->zangeresModel->getZangeressen();
+        $Zangeressen = $this->ZangeresModel->getZangeressen();
 
         $tableRows = "";
-        foreach ($zangeressen as $value) {
+        foreach ($Zangeressen as $value) {
             $tableRows .= "<tr>
                                 <td>$value->Id</td>
                                 <td>$value->Name</td>
@@ -36,6 +36,6 @@ class Zangeres extends BaseController
             'tableRows' => $tableRows
         ];
 
-        $this->view('zangeres/getZangeressen', $data);
+        $this->view('Zangeres/getZangeressen', $data);
     }
 }
