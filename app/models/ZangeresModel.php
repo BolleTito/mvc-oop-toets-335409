@@ -12,7 +12,11 @@ class ZangeresModel
     public function getZangeressen()
     {
         $sql = 'SELECT  Id
-                       ,Name
+                       ,Naam
+                       ,NettoWaarde
+                       ,Land
+                       ,Mobiel
+                       ,Leeftijd
                 FROM    Zangeres';
 
         $this->db->query($sql);

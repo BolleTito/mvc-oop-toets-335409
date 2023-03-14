@@ -27,7 +27,11 @@ class Zangeres extends BaseController
         foreach ($Zangeressen as $value) {
             $tableRows .= "<tr>
                                 <td>$value->Id</td>
-                                <td>$value->Name</td>
+                                <td>$value->Naam</td>
+                                <td>$value->NettoWaarde</td>
+                                <td>$value->Land</td>
+                                <td>$value->Mobiel</td>
+                                <td>$value->Leeftijd</td>
                            </tr>";
         }
 
